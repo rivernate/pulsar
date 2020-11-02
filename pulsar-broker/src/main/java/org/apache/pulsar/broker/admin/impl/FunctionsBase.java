@@ -138,6 +138,9 @@ public class FunctionsBase extends AdminResource implements Supplier<WorkerServi
                             "   Represents either a builtin schema type (for example: 'avro', 'json', ect) or the class name for a Schema implementation." +
                             "- **subName**  \n" +
                             "  Pulsar source subscription name. User can specify a subscription-name for the input-topic consumer.  \n" +
+                            "- **subsPosition** \n" +
+                            "  Pulsar source subscription position if user wants to consume messages from the specified location \n" +
+                            "  Possible Values: [Latest, Earliest]  \n" +
                             "- **windowConfig**  \n" +
                             "  The window configuration of a Pulsar Function.  \n" +
                             "- **timeoutMs**  \n" +
@@ -245,6 +248,9 @@ public class FunctionsBase extends AdminResource implements Supplier<WorkerServi
                             "   Represents either a builtin schema type (for example: 'avro', 'json', ect) or the class name for a Schema implementation." +
                             "- **subName**  \n" +
                             "  Pulsar source subscription name. User can specify a subscription-name for the input-topic consumer.  \n" +
+                            "- **subsPosition** \n" +
+                            "  Pulsar source subscription position if user wants to consume messages from the specified location \n" +
+                            "  Possible Values: [Latest, Earliest]  \n" +
                             "- **windowConfig**  \n" +
                             "  The window configuration of a Pulsar Function.  \n" +
                             "- **timeoutMs**  \n" +

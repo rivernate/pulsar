@@ -86,6 +86,9 @@ public class SinksBase extends AdminResource implements Supplier<WorkerService> 
                                      "- **sourceSubscriptionName**  \n" +
                                      "   Pulsar source subscription name if user wants a specific  \n" +
                                      "   subscription-name for input-topic consumer  \n" +
+                                     "- **subsPosition** \n" +
+                                     "   Pulsar source subscription position if user wants to consume messages from the specified location \n" +
+                                     "   Possible Values: [Latest, Earliest]  \n" +
                                      "- **inputs**  \n" +
                                      "   The input topic or topics of a Pulsar Sink (specified as a JSON array)  \n" +
                                      "- **topicsPattern**  \n" +
@@ -170,6 +173,9 @@ public class SinksBase extends AdminResource implements Supplier<WorkerService> 
                                        "- **sourceSubscriptionName**  \n" +
                                        "   Pulsar source subscription name if user wants a specific  \n" +
                                        "   subscription-name for input-topic consumer  \n" +
+                                       "- **subsPosition** \n" +
+                                       "   Pulsar source subscription position if user wants to consume messages from the specified location \n" +
+                                       "   Possible Values: [Latest, Earliest]  \n" +
                                        "- **inputs**  \n" +
                                        "   The input topic or topics of a Pulsar Sink (specified as a JSON array)  \n" +
                                        "- **topicsPattern**  \n" +

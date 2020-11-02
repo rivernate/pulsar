@@ -23,6 +23,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.apache.pulsar.client.api.SubscriptionInitialPosition;
 import org.apache.pulsar.common.functions.ConsumerConfig;
 import org.apache.pulsar.common.functions.FunctionConfig;
 import org.apache.pulsar.common.functions.Resources;
@@ -123,6 +124,12 @@ public class FunctionConfigUtils {
 
         if (isNotBlank(functionConfig.getSubName())) {
             sourceSpecBuilder.setSubscriptionName(functionConfig.getSubName());
+        }
+
+        if (functionConfig.getSourceSubscriptionPosition() == SubscriptionInitialPosition.Earliest) {
+            sourceSpecBuilder.setSubscriptionPosition(Function.SubscriptionPosition.EARLIEST);
+        } else {
+            sourceSpecBuilder.setSubscriptionPosition(Function.SubscriptionPosition.LATEST);
         }
 
         if (typeArgs != null) {

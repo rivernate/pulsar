@@ -28,6 +28,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import org.apache.pulsar.client.api.SubscriptionInitialPosition;
+
+
 /**
  * Configuration of Pulsar Function.
  */
@@ -99,6 +102,7 @@ public class FunctionConfig {
     private Integer maxMessageRetries;
     private String deadLetterTopic;
     private String subName;
+    private SubscriptionInitialPosition sourceSubscriptionPosition;
     private Integer parallelism;
     private Resources resources;
     private String fqfn;
